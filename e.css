@@ -1,0 +1,139 @@
+@keyframes move
+{
+    from{
+        -webkit-transform:translateY(0px);
+    }
+    to{
+        -webkit-transform:translateY(-15px);
+    }
+}
+
+@-moz-keyframes move
+{
+
+    from{
+        -webkit-transform:translateY(0px);
+    }
+    to{
+        -webkit-transform:translateY(-15px);
+    }
+}
+
+@-o-keyframes move
+{
+
+    from{
+        -webkit-transform:translateY(0px);
+    }
+    to{
+        -webkit-transform:translateY(-15px);
+    }
+}
+
+@-ms-keyframes move
+{
+
+    from{
+        -webkit-transform:translateY(0px);
+    }
+    to{
+        -webkit-transform:translateY(-15px);
+    }
+}
+
+@-webkit-keyframes move
+{
+
+    from{
+        -webkit-transform:translateY(0px);
+    }
+    to{
+        -webkit-transform:translateY(-15px);
+    }
+}
+
+.bool{
+    -webkit-animation: move 2.5s linear 2s infinite alternate;
+}
+
+
+@-webkit-keyframes gone{
+    0%{
+      left: 8%;
+      top:40%
+    }
+    25%{
+        left: 5%;
+        top:30%
+    }
+    50%{
+        left: 4%;
+        top:20%
+    }
+    75%{
+        left: 0%;
+        top:10%
+    }
+    100%{
+        left: -10%;
+        top:-40%
+    }
+
+}
+
+.gogogo{
+    -webkit-animation: gone 8s ease-out 5s forwards;
+}
+
+/*.anim-logo-balloons {*/
+    /*-webkit-animation: balloons1 2s ease 1s 1 forwards, balloons2 4s ease 3s infinite alternate;*/
+    /*-moz-animation: balloons1 2s ease 1s 1 forwards, balloons2 4s ease 3s infinite alternate;*/
+    /*-ms-animation: balloons1 2s ease 1s 1 forwards, balloons2 4s ease 3s infinite alternate;*/
+    /*-o-animation: balloons1 2s ease 1s 1 forwards, balloons2 4s ease 3s infinite alternate;*/
+    /*animation: balloons1 2s ease 1s 1 forwards, balloons2 4s ease 3s infinite alternate*/
+/*}*/
+
+/*.anim-logo-balloons-fly-away {*/
+    /*-webkit-transform: rotate(0deg);*/
+    /*-moz-transform: rotate(0deg);*/
+    /*-ms-transform: rotate(0deg);*/
+    /*-o-transform: rotate(0deg);*/
+    /*transform: rotate(0deg);*/
+    /*-webkit-animation: balloons-fly-away 6s ease-out 1 forwards;*/
+    /*-moz-animation: balloons-fly-away 6s ease-out 1 forwards;*/
+    /*-ms-animation: balloons-fly-away 6s ease-out 1 forwards;*/
+    /*-o-animation: balloons-fly-away 6s ease-out 1 forwards;*/
+    /*animation: balloons-fly-away 6s ease-out 1 forwards*/
+/*}*/
+
+/*.anim-logo-blackhole-light {*/
+    /*-webkit-animation: blackhole 10s linear infinite;*/
+    /*-moz-animation: blackhole 10s linear infinite;*/
+    /*-ms-animation: blackhole 10s linear infinite;*/
+    /*-o-animation: blackhole 10s linear infinite;*/
+    /*animation: blackhole 10s linear infinite*/
+/*}*/
+
+/*@-ms-keyframes balloons-fly-away {*/
+    /*0% {*/
+        /*top: 13.33%;*/
+        /*left: 50%*/
+    /*}*/
+    /*100% {*/
+        /*top: -32%;*/
+        /*left: 20%*/
+    /*}*/
+/*}*/
+
+
+.hide-move{
+    -webkit-transition:all .3s ease-in-out;
+}
+
+.op1{
+    opacity: 1;
+}
+
+.op0{
+    opacity: 0;
+}

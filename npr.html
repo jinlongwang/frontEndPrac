@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <title>NProgress: slim progress bars in JavaScript</title>
+    <link href='style.css' rel='stylesheet' />
+    <link href='nprogress.css' rel='stylesheet' />
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src='nprogress.js'></script>
+    <script>
+        //$(document).on('page:fetch', function() { NProgress.start(); });
+        //$(document).on('page:load', function() { NProgress.done(); });
+        $(document).ready(function(){
+            NProgress.configure({ showSpinner: false });
+            NProgress.start();
+        });
+
+        $(window).load(function(){
+            NProgress.done();
+
+        });
+
+    </script>
+</head>
+<body>
+    fdasfsdaf
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>welcome home</title>
+    <script src="jquery.js" type="text/javascript"></script>
+    <style>
+         body{
+             height: 100%;
+             width: 100%;
+             margin:0;
+             overflow-y:auto
+         }
+
+        .main{
+            width: 100%;
+            position: absolute;
+            height: 100%
+        }
+
+        .tr{
+            -webkit-transition:all 1s linear;
+        }
+
+        .show{
+            opacity: 1;
+        }
+        .hide{
+            opacity: 0;
+        }
+    </style>
+    <script>
+
+         var change = function(){
+             var $now = $(".cr");
+             if($now.next().length != 0){
+                 $now.removeClass("cr").css("opacity","0");
+                 $now.next().addClass("cr").css("opacity","1");
+             }else{
+                 $now.removeClass("cr").css("opacity","0");
+                 $("#fr").addClass("cr").css("opacity","1");
+             }
+         }
+         $(document).ready(function(){
+            //alert(111);
+            setInterval(change,5000);
+
+         });
+    </script>
+</head>
+<body>
+      <div id="fr" class="main tr show cr">
+          <img src="bg1.jpg" style="height: 100%;width: 100%">
+      </div>
+      <div class="main tr hide">
+          <img src="bg2.jpg" style="height: 100%;width: 100%">
+      </div>
+      <div class="main tr hide">
+          <img src="bg3.jpg" style="height: 100%;width: 100%">
+      </div>
+</body>
+</html>

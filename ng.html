@@ -1,0 +1,51 @@
+<!doctype html>
+<html ng-app>
+<head>
+
+    <!--<script src="http://code.angularjs.org/angular-1.0.1.min.js"></script>-->
+    <script src="http://cdn.bootcss.com/angular.js/1.3.0-beta.8/angular.js"></script>
+    <script type="text/javascript">
+//        function PhoneListCtrl($scope) {
+//            $scope.phones = [
+//                {"name": "Nexus S",
+//                    "snippet": "Fast just got faster with Nexus S.",
+//                    "age": 0,
+//                    "img":"http://img3.douban.com/view/commodity_story/imedium/public/p9084205.jpg"
+//                },
+//                {"name": "Motorola XOOM™ with Wi-Fi",
+//                    "snippet": "The Next, Next Generation tablet.",
+//                    "age": 1,
+//                    "img":"http://img3.douban.com/view/commodity_story/imedium/public/p9084205.jpg"
+//
+//                },
+//                {"name": "MOTOROLA XOOM™",
+//                    "snippet": "The Next, Next Generation tablet.",
+//                    "age": 2,
+//                    "img":"http://img3.douban.com/view/commodity_story/imedium/public/p9084205.jpg"
+//
+//                }
+//            ];
+//
+//            $scope.orderProp = 'age';
+//        }
+
+    </script>
+</head>
+<body ng-controller="PhoneListCtrl">
+Search: <input ng-model="query">
+Sort by:
+<select ng-model="orderProp">
+    <option value="age">Alphabetical</option>
+    <option value="name">Newest</option>
+</select>
+
+
+<ul class="phones">
+    <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+        <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.img}}"></a>
+        <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+        <p>{{phone.snippet}}</p>
+    </li>
+</ul>
+</body>
+</html>

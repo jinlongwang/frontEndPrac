@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>abc</title>
+    <style>
+        .mo{
+            /*-webkit-animation: left 10s linear infinite 3s;*/
+            -webkit-transition:all .2s linear;
+        }
+
+
+        @-webkit-keyframes left{
+              0%{
+                -webkit-transform:translateX(0px);
+
+              }
+              50%{
+                -webkit-transform:translateX(-638px);
+              }
+              100%{
+                -webkit-transform:translateX(-1300px);
+              }
+        }
+
+        .close {
+            background: url(http://res.souche.com/assets/images/common/guwen-slides/close.png);
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            -moz-transition: all .3s ease-in;
+            -webkit-transition: all .3s ease-in;
+            -o-transition: all .3s ease-in;
+            transition: all .3s ease-in;
+            z-index: 2;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+        }
+
+        a:hover{
+            -webkit-transform: rotateZ(180deg);
+        }
+
+    </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">
+         $(document).ready(function(){
+            alert(b.c);
+            width = 0;
+            setInterval(move, 10000);
+            //move();
+         });
+        function move(){
+
+              var li = $(".active");
+              li.removeClass("active");
+              if(li.next().length > 0){
+                 li.next().addClass("active");
+                 width += 680;
+              }else{
+                  width = 0;
+                  $("li:eq(0)").addClass("active");
+              }
+              $("ul").css("transform", "translateX(-"+width+"px)");
+              console.log(1111);
+        }
+    </script>
+</head>
+<body>
+    <a class="close"></a>
+    <div style="margin: 0 auto;width: 638px;height: 400px;overflow: hidden">
+        <ul style="list-style: none;padding: 0;width: 3000px;" class="mo">
+            <li style="display: inline-block"  id="1" class="active">
+                <img src="http://res.souche.com/files/default/972C128688DFC6F82F00EB5948AA600A_680x340.jpg" draggable="false">
+            </li>
+            <li style="display: inline-block" id="2">
+                <img data-src="http://res.souche.com/files/default/90F862E9AB24D46F29C7AFA837D279C0_678x339.jpg" src="http://res.souche.com/files/default/90F862E9AB24D46F29C7AFA837D279C0_678x339.jpg" draggable="false">
+            </li>
+            <li style="display: inline-block" id="3" >
+                <img data-src="http://res.souche.com/files/default/660E8AB472BF594D002B8FB9D29844E9_680x340.jpg" draggable="false" src="http://res.souche.com/files/default/660E8AB472BF594D002B8FB9D29844E9_680x340.jpg">
+            </li>
+
+        </ul>
+    </div>
+</body>
+</html>
